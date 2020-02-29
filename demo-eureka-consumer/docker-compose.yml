@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+ demo-eureka-docker:
+  build: 'C:\Users\Gaurav Garg\Downloads\demo-eureka-docker\demo-eureka-docker\'
+  ports:
+   - 9091:9091
+ demo-eureka-producer:
+  build: 'C:\Users\Gaurav Garg\Downloads\demo-eureka-producer\demo-eureka-producer\'
+  ports:
+   - 5656:5656
+  links:
+   - demo-eureka-docker
+ demo-eureka-consumer:
+  build: 'C:\Users\Gaurav Garg\Desktop\Eclipseworkspace\demo-eureka-consumer\'
+  ports:
+   - 5657:5657
+  links:
+   - demo-eureka-docker
+  links:
+    - demo-eureka-producer
+  
