@@ -1,0 +1,8 @@
+---
+applications:
+- memory: "512M"
+  timeout: "60"
+  name: "DemoDockerProject.module"
+env:
+  EUREKA_SERVER_URL: "http://laptop-n0pntsm7:9091/eureka"
+  ENABLE_SERVICE_DIRECT_REGISTRATION: true
