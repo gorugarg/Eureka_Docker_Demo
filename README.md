@@ -47,3 +47,12 @@ services:
    - demo-eureka-docker
   links:
     - demo-eureka-producer
+
+
+If we wanted to add BWCE microservice dependency and also want to register it with eureka then we can add :-
+ demo-eureka-bwce:
+  build: 'C:\Users\Gaurav Garg\workspace\bwce\EAR_DOCKER\'
+  ports:
+   - 8056:8056
+  environment:
+   EUREKA_SERVER_URL: http://demo-eureka-docker:9091
